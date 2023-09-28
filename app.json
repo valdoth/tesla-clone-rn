@@ -7,7 +7,7 @@
     "plugins": [
       "expo-router"
     ],
-    "name": "router_templates",
-    "slug": "router_templates"
+    "name": "tesla_clone",
+    "slug": "tesla_clone"
   }
 }
