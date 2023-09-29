@@ -16,7 +16,6 @@
     "expo-router": "2.0.0",
     "expo-splash-screen": "~0.20.4",
     "expo-status-bar": "~1.6.0",
-    "metro": "^0.79.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.72.5",
@@ -29,6 +28,14 @@
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9"
+  },
+  "overrides": {
+    "metro": "0.76.8",
+    "metro-resolver": "0.76.8"
+  },
+  "resolutions": {
+    "metro": "0.76.8",
+    "metro-resolver": "0.76.8"
   },
   "private": true
 }

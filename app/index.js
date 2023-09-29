@@ -1,14 +1,9 @@
 import { Image, StyleSheet, Text, View, FlatList } from 'react-native'
-import {
-  FontAwesome,
-  Entypo,
-  MaterialCommunityIcons,
-  FontAwesome5,
-  Ionicons,
-} from '@expo/vector-icons'
+import { FontAwesome } from '@expo/vector-icons'
 import car from '../assets/images/car.png'
 import menuOptions from '../data/menuOptions'
 import MenuOption from '../components/MenuOption'
+import Controls from '../components/Controls'
 
 const Page = () => {
   return (
@@ -23,17 +18,11 @@ const Page = () => {
 
       <Image source={car} style={styles.image} resizeMode='contain' />
 
-      <View style={styles.controls}>
-        <Entypo name='lock' size={26} color='gray' />
-        <MaterialCommunityIcons name='fan' size={26} color='gray' />
-        <FontAwesome5 name='bolt' size={26} color='gray' />
-        <Ionicons name='car-sport-sharp' size={26} color='gray' />
-      </View>
-
       <FlatList
         data={menuOptions}
         showsVerticalScrollIndicator={false}
-        renderItem={({ item }) => <MenuOption item={item} />}
+        renderItem={MenuOption}
+        ListHeaderComponent={Controls}
       />
     </View>
   )
@@ -64,11 +53,5 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: 300,
-  },
-  controls: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    marginVertical: 20,
   },
 })
